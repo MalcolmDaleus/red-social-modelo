@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sitio Ejemplo</title>
+
+		<!-- Fuentes y CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+			rel="stylesheet" />
+	</head>
+
+	<!-- Para quitar el menu del login, haz un comento de bloque sobre el <section class="cover"> elemento, cambiar el funcion del <body> a "lazyLoad()" y cambiar el codigo de lineas __ y __ en el JavaScript-->
+	<body onload="hideContent()">
+		<!-- Elemento de titulo con un icono de Font Awesome -->
+		<h1 class="logo-title" id="top">
+			Besogram <i class="fa-regular fa-face-kiss-beam"></i>
+		</h1>
+		<!-- La clase "cover" sirve como fondo del menú de inicio de sesión y cubre las imágenes mientras que se cargan -->
+		<section class="cover">
+			<!-- El componente del login tiene un icono y utiliza un <form> con un boton de tipo "submit". El buton comprueba el nombre de usuario y la contraseña en el JS -->
+			<section class="login-container transition-speed">
+				<i class="fa-solid fa-lock"></i>
+				<form action="" class="login-form" id="login">
+					<label for="username-field">Nombre de Usuario</label>
+					<input type="text" name="username" id="username-field" />
+					<label for="password-field">Contraseña</label>
+					<input
+						type="password"
+						name="password"
+						id="password-field" />
+					<input type="submit" value="Iniciar" id="submit-button" />
+				</form>
+			</section>
+		</section>
+
+		<!-- La parte principal con el contenido -->
+
+		<!-- El CSS utiliza CSS grid para organizar los componentes en una forma muy sencilla. Hay 4 columnas con el mismo ancho y tantas filas como sea necesaria. La altura de las filas cambian segun el tamaño de los componentes y los componentes puede ocupar mas de una columna-->
+
+		<!-- Los componentes son:
+			- <aside>: Las cajas de texto con <h2> cabeceras, y <p> texto. Tienen 3 tamaños que cambian cuantas columnas se ocupan 
+
+			- <figure>: Las componentes de las imagenes con <img> o <video> y <figcaption> para el texto abajo. Las imagenes siempre ocupan una columna pero su altura cambia segun sus dimensiones. Los videos ocupan 2 columnas
+
+			- <div>: Se usan para ocupar un especio del grid sin contenido y llenar la fila si el contenido no ocupa todo 
+
+			- <div class="separator">: Es un div que se ve como una linea recta y se usa para separar partes del contenido -->
+
+		<main>
+			<aside class="large">
+				<h2>Seccion Texto Tamaño 2</h2>
+				<p>Lorem ipsum dolor sit amet consectetur</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Doloribus praesentium sapiente pariatur sit quidem iste
+					minus neque tempore ea ducimus?
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Dolore doloremque illo, pariatur omnis non aperiam.
+				</p>
+			</aside>
+			<figure>
+				<img src="./images/beach-5234306_640.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/watercolor-2681039_1280.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+
+			<div class="separator"></div>
+
+			<figure class="video-figure">
+				<video
+					src="./images/v12044gd0000c9cp1qrc77ubpsbop1s0.MP4"
+					type="video/mp4"
+					controls></video>
+				<figcaption>Video Ejemplo</figcaption>
+			</figure>
+			<aside class="large">
+				<h2>Seccion Texto Tamaño 2</h2>
+				<p>Lorem ipsum dolor sit amet consectetur</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+					similique obcaecati repellendus quas in adipisci dolor
+					voluptatum assumenda
+				</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<p></p>
+				<p></p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+			</aside>
+			<div></div>
+			<figure style="margin-top: 0">
+				<img src="images/iPhone-Wallpaper-HD-53.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure style="margin-top: 0">
+				<img src="./images/Neon-cracks-iPhone-wallpaper.png" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<div></div>
+
+			<div class="separator"></div>
+
+			<figure>
+				<img src="./images/watercolor-2681039_1280.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img
+					src="./images/Nature-Road-Artwork-iPhone-Wallpaper-4K.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<aside class="small">
+				<h2>Seccion Texto Tamaño 1</h2>
+				<p>Aquí hay unas fotitas que me gustan tambien hehehe</p>
+			</aside>
+			<figure>
+				<img
+					src="./images/Cosmic-Mountains-iPhone-Wallpaper-HD.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+
+			<div class="separator"></div>
+
+			<aside class="xx-large">
+				<h2 style="display: inline">Seccion Texto Tamaño 4</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</aside>
+			<figure>
+				<img src="./images/Neon-cracks-iPhone-wallpaper.png" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/beach-5234306_640.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/iPhone-Wallpaper-HD-53.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/watercolor-2681039_1280.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+
+			<div class="separator"></div>
+
+			<figure>
+				<img
+					src="./images/Nature-Road-Artwork-iPhone-Wallpaper-4K.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/beach-5234306_640.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<aside class="small">
+				<h2>Seccion Texto Tamaño 1</h2>
+				<p>Lorem ipsum dolor sit amet consectetur</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</aside>
+			<figure class="video-inline">
+				<video
+					src="./images/v10044g50000c7mj7drc77ufdkonin8g.mp4"
+					type="video/mp4"
+					class="video-inline"
+					controls></video>
+				<figcaption>Video Ejemplo</figcaption>
+			</figure>
+
+			<div class="separator"></div>
+
+			<aside class="xx-large">
+				<h2 style="width: fit-content; margin: 0 auto">
+					Seccion Texto Tamaño 4
+				</h2>
+			</aside>
+			<aside class="large">
+				<h2>Seccion Texto Tamaño 2</h2>
+			</aside>
+			<figure>
+				<img
+					src="./images/Cosmic-Mountains-iPhone-Wallpaper-HD.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/watercolor-2681039_1280.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/iPhone-Wallpaper-HD-53.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/Neon-cracks-iPhone-wallpaper.png" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<aside class="large">
+				<h2>Seccion Texto Tamaño 2</h2>
+			</aside>
+			<aside class="small shine-yellow">
+				<h2>Seccion Texto Tamaño 1</h2>
+			</aside>
+			<figure class="shine">
+				<img
+					src="./images/Cool-Apple-iPhone-6-Wallpaper-2.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo con luz</figcaption>
+			</figure>
+			<figure class="shine">
+				<img
+					src="./images/Cool-Apple-iPhone-6-Wallpaper-2.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo con luz</figcaption>
+			</figure>
+			<figure class="shine">
+				<img
+					src="./images/Cool-Apple-iPhone-6-Wallpaper-2.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo con luz</figcaption>
+			</figure>
+
+			<div class="separator"></div>
+
+			<figure>
+				<img src="./images/beach-5234306_640.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<aside class="large">
+				<h2>Seccion Texto Tamaño 2</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+			</aside>
+			<figure>
+				<img src="./images/iPhone-Wallpaper-HD-53.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+
+			<div class="separator"></div>
+
+			<aside class="large">
+				<h2>Seccion Texto Tamaño 2</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</aside>
+			<figure>
+				<img
+					src="./images/Nature-Road-Artwork-iPhone-Wallpaper-4K.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img
+					src="./images/Cosmic-Mountains-iPhone-Wallpaper-HD.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+
+			<div class="separator"></div>
+
+			<figure>
+				<img src="./images/beach-5234306_640.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<figure>
+				<img src="./images/watercolor-2681039_1280.jpg" alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+			<aside class="large">
+				<h2>Seccion Texto Tamaño 2</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+					quidem quaerat vero, maiores qui libero velit vel explicabo
+					voluptas blanditiis earum fuga
+				</p>
+			</aside>
+
+			<div class="separator"></div>
+
+			<div></div>
+			<aside class="small">
+				<h2>Seccion Texto Tamaño 1</h2>
+			</aside>
+			<figure>
+				<img
+					src="./images/Cool-Apple-iPhone-6-Wallpaper-2.jpg"
+					alt="" />
+				<figcaption>Foto Ejemplo</figcaption>
+			</figure>
+		</main>
+		<footer>
+			<h2><a href="#top">Volver al principo ^</a></h2>
+		</footer>
+	</body>
+	<!-- Para los iconos y el JavaScript-->
+	<script
+		src="https://kit.fontawesome.com/8cf7cd7297.js"
+		crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+</html>

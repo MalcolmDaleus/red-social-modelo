@@ -1,0 +1,311 @@
+/* ====================================================== */
+/* CSS general para los elementos */
+/* ====================================================== */
+* {
+	padding: 0;
+	margin: 0;
+}
+/* El body tiene un degradado de color y un color normal por si acaso */
+body {
+	background: rgb(99, 0, 124);
+	background: linear-gradient(
+		rgba(167, 0, 255, 1) 0%,
+		rgba(204, 0, 255, 1) 25%,
+		rgba(255, 0, 255, 1) 50%,
+		rgba(204, 0, 255, 1) 75%,
+		rgba(167, 0, 255, 1) 100%
+	);
+	font-family: Handlee;
+}
+/* Aqui creamos la cuadricula con el main */
+main {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 columnas del mismo tamaño */
+	align-items: center;
+	justify-items: center;
+	background-image: url(./resources/ColoredPatterns1.svg); /* Crea los diseños enfrente del fondo */
+	background-size: contain;
+	background-repeat: repeat-y;
+}
+h2 {
+	margin: 0 auto;
+}
+footer {
+	text-shadow: 0 0 20px #fff;
+	padding: 1vw;
+	text-align: center;
+	display: block;
+	width: 100%;
+	background-color: rgba(80, 28, 90, 0.9);
+	margin-top: 5vw;
+}
+a:link,
+a:visited,
+a:active,
+a:hover {
+	color: #fff;
+}
+/* ====================================================== */
+/* Estilos para clases que se añaden a los componentes  */
+/* ====================================================== */
+.cover {
+	position: absolute;
+	background-color: transparent;
+	background: linear-gradient(
+		rgba(167, 0, 255, 1) 0%,
+		rgba(204, 0, 255, 1) 25%,
+		rgba(255, 0, 255, 1) 50%,
+		rgba(204, 0, 255, 1) 75%,
+		rgba(167, 0, 255, 1) 100%
+	);
+	width: 100%;
+	height: 90vh;
+	transition: 1.4s ease-in-out;
+}
+/* titulo */
+.logo-title {
+	color: #fff;
+	width: 50%;
+	text-shadow: 0 0 20px #fff;
+	font-size: 5vw;
+	text-align: center;
+	margin: 2vw auto;
+	padding: 1vw;
+	background-color: rgba(80, 28, 90, 0.9);
+	border-radius: 25vw;
+}
+/* Para las lineas entre partes del contenido */
+.separator {
+	grid-column: span 4; /* Dice que el elemento ocupa 4 columnas */
+	display: block;
+	margin: 3vw auto;
+	height: 0.2vw;
+	width: 90%;
+	/* Esta degradado de color hace que los bordes se destiñan */
+	background-image: linear-gradient(
+		to right,
+		rgba(255, 176, 233, 0) 5%,
+		rgba(255, 176, 233, 0.9),
+		rgba(255, 176, 233, 0) 95%
+	);
+}
+.shine {
+	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 30px #fff, 0 0 100px #fff;
+}
+.shine-yellow {
+	box-shadow: 0 0 5px #ffe585, 0 0 10px #ffeca9, 0 0 30px #fff4ce,
+		0 0 100px #fff;
+}
+/* Crean las animaciones del componentes */
+.fade-in {
+	opacity: 1;
+}
+.fade-out {
+	opacity: 0;
+}
+.transition-speed {
+	transition: opacity 0.5s ease-in-out;
+}
+/* ====================================================== */
+/* Elementos de login */
+/* ====================================================== */
+.login-container {
+	width: fit-content;
+	height: fit-content;
+	min-width: 30vw;
+	min-height: 30vw;
+	margin: 2vw auto auto auto;
+	background-color: rgba(65, 28, 90, 0.5);
+	border-radius: 4vw;
+	text-align: center;
+}
+.login-form {
+	width: 30vw;
+	padding: 3vw 5vw;
+	text-align: left;
+}
+input {
+	width: 90%;
+	height: 2.5vw;
+	padding: 0.5vw;
+	border: 3px solid #ccc;
+	border-radius: 5px;
+	margin: 0.5vw 0;
+	font-size: 1.3vw;
+}
+label {
+	color: #fff;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+	font-size: 1.3vw;
+}
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	25%,
+	75% {
+		transform: translateX(-10px);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+}
+.wrong {
+	animation: shake 0.25s ease-in-out;
+	border-color: #f00;
+}
+/* Los iconos, de hecho, realmente son texto */
+.fa-lock {
+	font-size: 10vw;
+	color: #ffcc00;
+	display: block;
+	padding-top: 1.5vw;
+}
+/* No estoy seguro de si se aplica a todas las etiquetas, pero con <input> se pueden aplicar estilos a cada tipo */
+input[type="submit"] {
+	width: 60%;
+	height: fit-content;
+	border: none;
+	font-size: 2vw;
+	margin: 1vw 20% 0 20%;
+	color: #ffffff;
+	border-radius: 30px;
+	background-image: linear-gradient(
+		135deg,
+		rgba(255, 193, 60, 1),
+		rgb(207, 82, 4)
+	);
+}
+/* ====================================================== */
+/* Componentes de imagenes y videos */
+/* ====================================================== */
+img {
+	width: 17.5vw;
+	vertical-align: top;
+	border-radius: 1vw;
+}
+video {
+	width: 27vw;
+	vertical-align: top;
+	border-radius: 1vw;
+}
+figcaption {
+	font-size: 2vw;
+	background-color: white;
+	padding: 1vw;
+	text-align: center;
+	vertical-align: middle;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+figure {
+	width: 70%;
+	border: 2vw solid #fff;
+	border-radius: 2vw;
+	background-color: #fff;
+	margin: 2vw 0;
+	box-shadow: 5px 5px 3vw #000;
+}
+.video-figure {
+	grid-column: span 2;
+	width: 27vw;
+}
+.video-inline {
+	width: 17.5vw;
+}
+/* ====================================================== */
+/* Componentes de texto */
+/* ====================================================== */
+aside {
+	background-color: #fff;
+	border: 1vw solid #ffd12b;
+	border-radius: 2vw;
+	font-size: 1.75vw;
+	padding: 2vw;
+	box-sizing: border-box;
+	box-shadow: 5px 5px 3vw #000;
+}
+/* Diferentes tamaños; el span valor especifica cuantas columnas se puede ocupar */
+.xx-large {
+	grid-column: span 4;
+	width: 80%;
+}
+.large {
+	grid-column: span 2;
+	width: 80%;
+}
+.small {
+	grid-column: span 1;
+	width: 80%;
+}
+aside p {
+	padding: 0.5vw 0;
+}
+/* ====================================================== */
+/* Cambiar CSS para la vista en movil o dispositivos con menos de 700px de ancho */
+/* ====================================================== */
+@media (max-width: 700px) {
+	.login-container {
+		width: fit-content;
+		height: fit-content;
+		min-width: 70vw;
+		min-height: 70vw;
+		margin: 2vw auto auto auto;
+		background-color: rgba(65, 28, 90, 0.5);
+		border-radius: 12vw;
+		text-align: center;
+	}
+	.login-form {
+		width: 70vw;
+		padding: 5vw 8vw;
+		text-align: left;
+	}
+	input {
+		width: 90%;
+		height: 7vw;
+		padding: 2vw;
+		border: 3px solid #ccc;
+		border-radius: 5px;
+		margin: 0.5vw 0;
+		font-size: 4vw;
+	}
+	label {
+		color: #fff;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-size: 4vw;
+	}
+	.fa-lock {
+		font-size: 17vw;
+		color: #ffcc00;
+		display: block;
+		padding-top: 10vw;
+	}
+	input[type="submit"] {
+		width: 60%;
+		height: fit-content;
+		border: none;
+		font-size: 4vw;
+		margin: 10vw 20% 5vw 20%;
+		color: #ffffff;
+		border-radius: 30px;
+		background-image: linear-gradient(
+			135deg,
+			rgba(255, 193, 60, 1),
+			rgb(207, 82, 4)
+		);
+	}
+	.logo-title {
+		color: #fff;
+		width: 70%;
+		text-shadow: 0 0 20px #fff;
+		font-size: 10vw;
+		text-align: center;
+		margin: 2vw auto;
+		padding: 1vw;
+		background-color: rgba(80, 28, 90, 0.9);
+		border-radius: 25vw;
+	}
+}
